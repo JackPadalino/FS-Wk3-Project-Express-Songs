@@ -1,4 +1,4 @@
-const songData=require('./dummyData.js');
+const dummyData=require('./dummyData.js');
 const express=require('express');
 const app=express();
 const PORT=3000;
@@ -8,8 +8,8 @@ app.use(express.static('public'));
 
 // here we're creating an error handler
 function errorHandler(err, req, res, next) {
-  console.error(err);
-  res.status(500).send('Something went wrong...')
+  console.log(err.stack);
+	res.status(404).send('Something went horribly, terribly wrong...');
 }
 
 app.get('/health',(req,res)=>{
@@ -18,6 +18,7 @@ app.get('/health',(req,res)=>{
 
 // endpoint for entire array
 app.get('/songs',(req,res)=>{
+    const songData=dummyData.list();
     const html = `
     <!DOCTYPE html>
     <html>
@@ -49,28 +50,32 @@ app.get('/songs',(req,res)=>{
 // endpoint for a single song
 app.get('/songs/:songId',(req,res)=>{
     const songId=req.params.songId;
-    const song=songData[songId-1];
-    const html = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Song DB</title>
-      <link rel='stylesheet' href='/style.css'/>
-    </head>
-    <body>
-      <div class='songDetailsContainer'>
-        <h1 id="songTitle">${song['Track.Name']}</h1>
-        <h3>${song['Artist.Name']}</h3>
-        <ul>
-          <li><b>Genre:</b> ${song.Genre}</li>
-          <li><b>BPM:</b> ${song['Beats.Per.Minute']}</li>
-          <li><b>Energy:</b> ${song.Energy}</li>
-        </ul>
-      </div>
-    </body>
-    </html>
-    `;
-   res.send(html);
+    const song = dummyData.find(songId);
+    if (!song.id){
+      throw new Error(`Song with ID:${songId} not found.`)
+    }else{
+      const html = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Song DB</title>
+        <link rel='stylesheet' href='/style.css'/>
+      </head>
+      <body>
+        <div class='songDetailsContainer'>
+          <h1 id="songTitle">${song['Track.Name']}</h1>
+          <h3>${song['Artist.Name']}</h3>
+          <ul>
+            <li><b>Genre:</b> ${song.Genre}</li>
+            <li><b>BPM:</b> ${song['Beats.Per.Minute']}</li>
+            <li><b>Energy:</b> ${song.Energy}</li>
+          </ul>
+        </div>
+      </body>
+      </html>
+      `;
+      res.send(html);
+    };
 });
 
 // using the error handler as middleware
