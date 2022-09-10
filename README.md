@@ -1,6 +1,7 @@
 # Repo for Fullstack Junior Phase week-3 project
 
-So for error handling in express beyond the defaults, there's 2 main things to keep in mind there's two major pieces to keep in mind - how to report errors and how to catch errors.
+### Error handling in Express
+For error handling in express beyond the defaults, there are 2 main things to keep in mind there's two major pieces to keep in mind - how to report errors and how to catch errors.
 To send your code to the error handler, all you have to do is give the next function the error and send it on it's way. Since this is automatic in express 5.0 however, all you've gotta do is throw an error and express will automatically catch it Here's an example of some middleware that would check if a user is logged in and send back an error if they weren't:
 
 ```
