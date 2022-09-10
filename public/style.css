@@ -23,7 +23,7 @@ ul{
 
 #mainTitle{
     text-align: center;
-    background-color: rgb(222, 56, 222);
+    background-color: rgb(56, 189, 222);
 }
 
 
@@ -31,12 +31,12 @@ ul{
     display: flex;
     flex-direction: column;
     padding:10px;
-    background-color: rgb(236, 221, 236);
+    background-color: rgb(192, 218, 224);
     gap:10px;
 }
 
 .songContainer{
-    background-color: rgb(224, 154, 224);
+    background-color: rgb(122, 197, 216);
     padding:10px;
     border: 1px solid black;
     border-radius: 5px;
@@ -48,7 +48,7 @@ ul{
     justify-content: center;
     align-items: center;
     width:fit-content;
-    background-color: rgb(224, 154, 224);
+    background-color: rgb(122, 197, 216);
     padding:10px;
     border: 1px solid black;
     border-radius: 5px;
