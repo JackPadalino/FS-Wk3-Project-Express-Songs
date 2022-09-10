@@ -1,3 +1,8 @@
+/*
+Follow this post to turn a CSV file into an array of objects:
+https://sebhastian.com/read-csv-javascript/
+*/
+
 const fs=require('fs');
 const {parse}=require('csv-parse');
 
