@@ -27,7 +27,7 @@ app.get('/songs',(req,res)=>{
             (song) =>
               `
               <div class='songContainer'>
-                <p><b>${song['Track.Name']}</b> by ${song['Artist.Name']}</p>
+                <a href="/songs/${song.id}/"><b>${song['Track.Name']}</b> by ${song['Artist.Name']}</a>
                 <p>${song.Genre}</p>
               </div>
               `
@@ -41,9 +41,9 @@ app.get('/songs',(req,res)=>{
 });
 
 // endpoint for a single song
-app.get('/songs/:songIndex',(req,res)=>{
-    const songIndex=req.params.songIndex;
-    const song=songData[songIndex];
+app.get('/songs/:songId',(req,res)=>{
+    const songId=req.params.songId;
+    const song=songData[songId-1];
     const html = `
     <!DOCTYPE html>
     <html>
