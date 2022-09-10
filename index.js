@@ -21,12 +21,17 @@ app.get('/songs',(req,res)=>{
     </head>
     <body>
       <h1 id="mainTitle">Songs</h1>
-      <ul>
+      <div id='songListContainer'>
         ${songData.map(
           (song) =>
-            `<li><b>${song['Track.Name']}</b> by ${song['Artist.Name']}</li>`
+            `
+            <div class='songContainer'>
+              <p><b>${song['Track.Name']}</b></p>
+              <small><p>${song['Artist.Name']}</p></small>
+            </div>
+            `
         ).join('')}
-      </ul>
+      </div>
     </body>
     </html>
     `;
@@ -45,13 +50,15 @@ app.get('/songs/:songIndex',(req,res)=>{
       <link rel='stylesheet' href='/style.css'/>
     </head>
     <body>
-      <h1 id="mainTitle">${song['Track.Name']}</h1>
-      <h3>by ${song['Artist.Name']}</h3>
-      <ul>
-        <li>Genre: ${song.Genre}</li>
-        <li>BPM: ${song['Beats.Per.Minute']}</li>
-        <li>Energy: ${song.Energy}</li>
-      </ul>
+      <div class='songDetailsContainer'>
+        <h1 id="songTitle">${song['Track.Name']}</h1>
+        <h3>${song['Artist.Name']}</h3>
+        <ul>
+          <li><b>Genre:</b> ${song.Genre}</li>
+          <li><b>BPM:</b> ${song['Beats.Per.Minute']}</li>
+          <li><b>Energy:</b> ${song.Energy}</li>
+        </ul>
+      </div>
     </body>
     </html>
     `;
