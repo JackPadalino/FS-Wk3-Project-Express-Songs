@@ -6,6 +6,11 @@ const PORT=3000;
 // importing other modules
 app.use(express.static('public'));
 
+function errorHandler(err, req, res, next) {
+  console.error(err);
+  res.status(500).send('Something went wrong...')
+}
+
 app.get('/health',(req,res)=>{
     res.send('Server is online!');
 })
@@ -66,6 +71,8 @@ app.get('/songs/:songId',(req,res)=>{
     `;
    res.send(html);
 });
+
+app.use(errorHandler);
 
 // telling Node to listen up
 app.listen(PORT,()=>{
