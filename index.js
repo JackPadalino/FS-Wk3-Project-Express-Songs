@@ -20,17 +20,19 @@ app.get('/songs',(req,res)=>{
       <link rel='stylesheet' href='/style.css'/>
     </head>
     <body>
-      <h1 id="mainTitle">Songs</h1>
-      <div id='songListContainer'>
-        ${songData.map(
-          (song) =>
-            `
-            <div class='songContainer'>
-              <p><b>${song['Track.Name']}</b></p>
-              <small><p>${song['Artist.Name']}</p></small>
-            </div>
-            `
-        ).join('')}
+      <div id="mainContainer">
+        <h1 id="mainTitle">Songs</h1>
+        <div id='songListContainer'>
+          ${songData.map(
+            (song) =>
+              `
+              <div class='songContainer'>
+                <p><b>${song['Track.Name']}</b> by ${song['Artist.Name']}</p>
+                <p>${song.Genre}</p>
+              </div>
+              `
+          ).join('')}
+        </div>
       </div>
     </body>
     </html>
