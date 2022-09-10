@@ -33,7 +33,7 @@ const songData=[
     },
     {
       '': '3',
-      'Track.Name': 'boyfriend (with Social House)',
+      'Track.Name': 'boyfriend',
       'Artist.Name': 'Ariana Grande',
       Genre: 'dance pop',
       'Beats.Per.Minute': '190',
@@ -49,7 +49,7 @@ const songData=[
     },
     {
       '': '4',
-      'Track.Name': 'Beautiful People (feat. Khalid)',
+      'Track.Name': 'Beautiful People',
       'Artist.Name': 'Ed Sheeran',
       Genre: 'pop',
       'Beats.Per.Minute': '93',
@@ -65,7 +65,7 @@ const songData=[
     },
     {
       '': '5',
-      'Track.Name': 'Goodbyes (Feat. Young Thug)',
+      'Track.Name': 'Goodbyes',
       'Artist.Name': 'Post Malone',
       Genre: 'dfw rap',
       'Beats.Per.Minute': '150',
@@ -81,7 +81,7 @@ const songData=[
     },
     {
       '': '6',
-      'Track.Name': "I Don't Care (with Justin Bieber)",
+      'Track.Name': "I Don't Care",
       'Artist.Name': 'Ed Sheeran',
       Genre: 'pop',
       'Beats.Per.Minute': '102',
@@ -129,7 +129,7 @@ const songData=[
     },
     {
       '': '9',
-      'Track.Name': 'Old Town Road - Remix',
+      'Track.Name': 'Old Town Road',
       'Artist.Name': 'Lil Nas X',
       Genre: 'country rap',
       'Beats.Per.Minute': '136',
@@ -177,7 +177,7 @@ const songData=[
     },
     {
       '': '12',
-      'Track.Name': 'Loco Contigo (feat. J. Balvin & Tyga)',
+      'Track.Name': 'Loco Contigo',
       'Artist.Name': 'DJ Snake',
       Genre: 'dance pop',
       'Beats.Per.Minute': '96',
@@ -209,7 +209,7 @@ const songData=[
     },
     {
       '': '14',
-      'Track.Name': 'Otro Trago - Remix',
+      'Track.Name': 'Otro Trago',
       'Artist.Name': 'Sech',
       Genre: 'panamanian pop',
       'Beats.Per.Minute': '176',
@@ -225,7 +225,7 @@ const songData=[
     },
     {
       '': '15',
-      'Track.Name': 'Money In The Grave (Drake ft. Rick Ross)',
+      'Track.Name': 'Money In The Grave',
       'Artist.Name': 'Drake',
       Genre: 'canadian hip hop',
       'Beats.Per.Minute': '101',
@@ -241,7 +241,7 @@ const songData=[
     },
     {
       '': '16',
-      'Track.Name': 'No Guidance (feat. Drake)',
+      'Track.Name': 'No Guidance',
       'Artist.Name': 'Chris Brown',
       Genre: 'dance pop',
       'Beats.Per.Minute': '93',
@@ -273,7 +273,7 @@ const songData=[
     },
     {
       '': '18',
-      'Track.Name': 'Sunflower - Spider-Man: Into the Spider-Verse',
+      'Track.Name': 'Sunflower',
       'Artist.Name': 'Post Malone',
       Genre: 'dfw rap',
       'Beats.Per.Minute': '90',
@@ -353,7 +353,7 @@ const songData=[
     },
     {
       '': '23',
-      'Track.Name': 'No Me Conoce - Remix',
+      'Track.Name': 'No Me Conoce',
       'Artist.Name': 'Jhay Cortez',
       Genre: 'reggaeton flow',
       'Beats.Per.Minute': '92',
@@ -369,7 +369,7 @@ const songData=[
     },
     {
       '': '24',
-      'Track.Name': 'Soltera - Remix',
+      'Track.Name': 'Soltera',
       'Artist.Name': 'Lunay',
       Genre: 'latin',
       'Beats.Per.Minute': '92',
@@ -385,7 +385,7 @@ const songData=[
     },
     {
       '': '25',
-      'Track.Name': 'bad guy (with Justin Bieber)',
+      'Track.Name': 'bad guy',
       'Artist.Name': 'Billie Eilish',
       Genre: 'electropop',
       'Beats.Per.Minute': '135',
@@ -513,7 +513,7 @@ const songData=[
     },
     {
       '': '33',
-      'Track.Name': '0.958333333333333',
+      'Track.Name': '0.95833',
       'Artist.Name': 'Maluma',
       Genre: 'reggaeton',
       'Beats.Per.Minute': '96',
@@ -529,7 +529,7 @@ const songData=[
     },
     {
       '': '34',
-      'Track.Name': 'The London (feat. J. Cole & Travis Scott)',
+      'Track.Name': 'The London',
       'Artist.Name': 'Young Thug',
       Genre: 'atl hip hop',
       'Beats.Per.Minute': '98',
@@ -561,7 +561,7 @@ const songData=[
     },
     {
       '': '36',
-      'Track.Name': 'Summer Days (feat. Macklemore & Patrick Stump of Fall Out Boy)',
+      'Track.Name': 'Summer Days',
       'Artist.Name': 'Martin Garrix',
       Genre: 'big room',
       'Beats.Per.Minute': '114',
@@ -593,7 +593,7 @@ const songData=[
     },
     {
       '': '38',
-      'Track.Name': 'Antisocial (with Travis Scott)',
+      'Track.Name': 'Antisocial',
       'Artist.Name': 'Ed Sheeran',
       Genre: 'pop',
       'Beats.Per.Minute': '152',
@@ -625,7 +625,7 @@ const songData=[
     },
     {
       '': '40',
-      'Track.Name': "fuck, i'm lonely (with Anne-Marie) - from 13 Reasons Why: Season 3",
+      'Track.Name': "fuck, i'm lonely",
       'Artist.Name': 'Lauv',
       Genre: 'dance pop',
       'Beats.Per.Minute': '95',
@@ -785,7 +785,7 @@ const songData=[
     },
     {
       '': '50',
-      'Track.Name': 'Cross Me (feat. Chance the Rapper & PnB Rock)',
+      'Track.Name': 'Cross Me',
       'Artist.Name': 'Ed Sheeran',
       Genre: 'pop',
       'Beats.Per.Minute': '95',
