@@ -22,6 +22,7 @@ app.use((req, res, next) => {
 
 Once the error is thrown from the function, it'll get caught by middleware that lives at the end of your API and takes in an extra fourth argument:
 
+```
 // Unlike other middleware this is the last route in your codebase, right above where you start your server
 app.use((err, req, res, next) => {
   
@@ -31,18 +32,21 @@ app.use((err, req, res, next) => {
   // Send the user back something to communicate that its broken
   res.status(500).send('Something broke!')
 })
+```
 
 Realistically, you can toss whatever feels the most useful into that error handler but the most important thing you need in it is a res.send because if you don't give the user a response their browsers will time out and never realize that something broke in the first place.
 
 
 You can either pass a custom error from within the route or - if you're in the newest version of express - you can do the same as what the app.use above is doing and just throw an error. The new thing they added in essentially surrounds every route with this code:
 
+```
 try {
   // code in your route
 } catch(err) {
 
   return next(err)
 }
+```
 
 The TL;DR of it is basically just:
 Whenever you hit an error either just do throw new Error("Stuff Broke")
