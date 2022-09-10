@@ -1,7 +1,7 @@
 const songData=[
     {
       '': '1',
-      'Track.Name': 'Se�orita',
+      'Track.Name': 'Senorita',
       'Artist.Name': 'Shawn Mendes',
       Genre: 'canadian pop',
       'Beats.Per.Minute': '117',
@@ -257,7 +257,7 @@ const songData=[
     },
     {
       '': '17',
-      'Track.Name': 'LA CANCI�N',
+      'Track.Name': 'LA CANCION',
       'Artist.Name': 'J Balvin',
       Genre: 'latin',
       'Beats.Per.Minute': '176',
@@ -625,7 +625,7 @@ const songData=[
     },
     {
       '': '40',
-      'Track.Name': "fuck, i'm lonely (with Anne-Marie) - from �13 Reasons Why: Season 3�",
+      'Track.Name': "fuck, i'm lonely (with Anne-Marie) - from 13 Reasons Why: Season 3",
       'Artist.Name': 'Lauv',
       Genre: 'dance pop',
       'Beats.Per.Minute': '95',
@@ -706,7 +706,7 @@ const songData=[
     {
       '': '45',
       'Track.Name': 'Con Altura',
-      'Artist.Name': 'ROSAL�A',
+      'Artist.Name': 'ROSALIA',
       Genre: 'r&b en espanol',
       'Beats.Per.Minute': '98',
       Energy: '69',
@@ -737,7 +737,7 @@ const songData=[
     },
     {
       '': '47',
-      'Track.Name': 'Te Robar�',
+      'Track.Name': 'Te Robaro',
       'Artist.Name': 'Nicky Jam',
       Genre: 'latin',
       'Beats.Per.Minute': '176',
@@ -801,8 +801,4 @@ const songData=[
     }
 ];
 
-const list = () => {
-  return [...songData] 
-  }; 
-
-module.exports={list:list};
+module.exports=[...songData];
