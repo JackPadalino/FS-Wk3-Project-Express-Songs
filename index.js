@@ -9,7 +9,20 @@ app.use(express.static('public'));
 // here we're creating an error handler
 function errorHandler(err, req, res, next) {
   console.log(err.stack);
-	res.status(404).send('Something went horribly, terribly wrong...');
+  const html=`
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Song DB</title>
+    <link rel='stylesheet' href='/style.css'/>
+  </head>
+  <body>
+    <p>SoMeThInG wEnT wRoNg...</p>
+    <img src="/fine.gif" />
+  </body>
+  </html>
+  `
+	res.status(404).send(html);
 }
 
 app.get('/health',(req,res)=>{
