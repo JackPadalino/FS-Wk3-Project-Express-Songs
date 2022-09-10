@@ -801,4 +801,13 @@ const songData=[
     }
 ];
 
-module.exports=[...songData];
+const list = () => {
+  return [...songData] 
+}; 
+  
+const find = (id) => {
+  const song = songData.find(song => song.id === +id);
+  return {...song};
+};
+  
+module.exports = { list: list, find: find };
