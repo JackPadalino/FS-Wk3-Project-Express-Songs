@@ -36,11 +36,6 @@ ul{
 }
 
 .songContainer{
-    /*display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-basis:auto;*/
     background-color: rgb(224, 154, 224);
     padding:10px;
     border: 1px solid black;
@@ -53,6 +48,7 @@ ul{
     justify-content: center;
     align-items: center;
     width:fit-content;
+    background-color: rgb(224, 154, 224);
     padding:10px;
     border: 1px solid black;
     border-radius: 5px;
