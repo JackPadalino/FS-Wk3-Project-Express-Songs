@@ -6,6 +6,7 @@ const PORT=3000;
 // importing other modules
 app.use(express.static('public'));
 
+// here we're creating an error handler
 function errorHandler(err, req, res, next) {
   console.error(err);
   res.status(500).send('Something went wrong...')
@@ -72,6 +73,7 @@ app.get('/songs/:songId',(req,res)=>{
    res.send(html);
 });
 
+// using the error handler as middleware
 app.use(errorHandler);
 
 // telling Node to listen up
