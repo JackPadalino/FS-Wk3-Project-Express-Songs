@@ -3,30 +3,45 @@ body{
     margin-right:20px;
 }
 
-ul{
-    list-style:none;
+p,h1,h2,h3,h4,h5,ul{
     padding:0px;
     margin:0px;
 }
 
-#mainTitle{
-    text-align: center;
+ul{
+    list-style:none;
 }
 
-#songListContainer{
+
+#mainContainer{
     display:flex;
-    flex-wrap: wrap;
-    /*justify-content: center;*/
-    column-gap:15px;
-    row-gap:15px;
+    flex-direction: column;
+    width:800px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#mainTitle{
+    text-align: center;
+    background-color: rgb(222, 56, 222);
+}
+
+
+#songListContainer{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    background-color: rgb(236, 221, 236);
+    gap:10px;
 }
 
 .songContainer{
-    display:flex;
+    /*display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis:auto;
+    flex-basis:auto;*/
+    background-color: rgb(224, 154, 224);
     padding:10px;
     border: 1px solid black;
     border-radius: 5px;
