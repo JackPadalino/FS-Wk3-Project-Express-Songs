@@ -2,9 +2,10 @@
   "name": "fs-wk3-project-express-songs",
   "version": "1.0.0",
   "description": "Repo for Fullstack Junior Phase week 3 project: Create a simple web server using Express!",
-  "main": "parse.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
