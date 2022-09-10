@@ -1,6 +1,6 @@
 const songData=[
     {
-      '': '1',
+      id: 1,
       'Track.Name': 'Senorita',
       'Artist.Name': 'Shawn Mendes',
       Genre: 'canadian pop',
@@ -16,7 +16,7 @@ const songData=[
       Popularity: '79'
     },
     {
-      '': '2',
+      id: 2,
       'Track.Name': 'China',
       'Artist.Name': 'Anuel AA',
       Genre: 'reggaeton flow',
@@ -32,7 +32,7 @@ const songData=[
       Popularity: '92'
     },
     {
-      '': '3',
+      id: 3,
       'Track.Name': 'boyfriend',
       'Artist.Name': 'Ariana Grande',
       Genre: 'dance pop',
@@ -48,7 +48,7 @@ const songData=[
       Popularity: '85'
     },
     {
-      '': '4',
+      id: 4,
       'Track.Name': 'Beautiful People',
       'Artist.Name': 'Ed Sheeran',
       Genre: 'pop',
@@ -64,7 +64,7 @@ const songData=[
       Popularity: '86'
     },
     {
-      '': '5',
+      id: 5,
       'Track.Name': 'Goodbyes',
       'Artist.Name': 'Post Malone',
       Genre: 'dfw rap',
@@ -80,7 +80,7 @@ const songData=[
       Popularity: '94'
     },
     {
-      '': '6',
+      id: 6,
       'Track.Name': "I Don't Care",
       'Artist.Name': 'Ed Sheeran',
       Genre: 'pop',
@@ -96,7 +96,7 @@ const songData=[
       Popularity: '84'
     },
     {
-      '': '7',
+      id: 7,
       'Track.Name': 'Ransom',
       'Artist.Name': 'Lil Tecca',
       Genre: 'trap music',
@@ -112,7 +112,7 @@ const songData=[
       Popularity: '92'
     },
     {
-      '': '8',
+      id: 8,
       'Track.Name': 'How Do You Sleep?',
       'Artist.Name': 'Sam Smith',
       Genre: 'pop',
@@ -128,7 +128,7 @@ const songData=[
       Popularity: '90'
     },
     {
-      '': '9',
+      id: 9,
       'Track.Name': 'Old Town Road',
       'Artist.Name': 'Lil Nas X',
       Genre: 'country rap',
@@ -144,7 +144,7 @@ const songData=[
       Popularity: '87'
     },
     {
-      '': '10',
+      id: 10,
       'Track.Name': 'bad guy',
       'Artist.Name': 'Billie Eilish',
       Genre: 'electropop',
@@ -160,7 +160,7 @@ const songData=[
       Popularity: '95'
     },
     {
-      '': '11',
+      id: 11,
       'Track.Name': 'Callaita',
       'Artist.Name': 'Bad Bunny',
       Genre: 'reggaeton',
@@ -176,7 +176,7 @@ const songData=[
       Popularity: '93'
     },
     {
-      '': '12',
+      id: 12,
       'Track.Name': 'Loco Contigo',
       'Artist.Name': 'DJ Snake',
       Genre: 'dance pop',
@@ -192,7 +192,7 @@ const songData=[
       Popularity: '86'
     },
     {
-      '': '13',
+      id: 13,
       'Track.Name': 'Someone You Loved',
       'Artist.Name': 'Lewis Capaldi',
       Genre: 'pop',
@@ -208,7 +208,7 @@ const songData=[
       Popularity: '88'
     },
     {
-      '': '14',
+      id: 14,
       'Track.Name': 'Otro Trago',
       'Artist.Name': 'Sech',
       Genre: 'panamanian pop',
@@ -224,7 +224,7 @@ const songData=[
       Popularity: '87'
     },
     {
-      '': '15',
+      id: 15,
       'Track.Name': 'Money In The Grave',
       'Artist.Name': 'Drake',
       Genre: 'canadian hip hop',
@@ -240,7 +240,7 @@ const songData=[
       Popularity: '92'
     },
     {
-      '': '16',
+      id: 16,
       'Track.Name': 'No Guidance',
       'Artist.Name': 'Chris Brown',
       Genre: 'dance pop',
@@ -256,7 +256,7 @@ const songData=[
       Popularity: '82'
     },
     {
-      '': '17',
+      id: 17,
       'Track.Name': 'LA CANCION',
       'Artist.Name': 'J Balvin',
       Genre: 'latin',
@@ -272,7 +272,7 @@ const songData=[
       Popularity: '90'
     },
     {
-      '': '18',
+      id: 18,
       'Track.Name': 'Sunflower',
       'Artist.Name': 'Post Malone',
       Genre: 'dfw rap',
@@ -288,7 +288,7 @@ const songData=[
       Popularity: '91'
     },
     {
-      '': '19',
+      id: 19,
       'Track.Name': 'Lalala',
       'Artist.Name': 'Y2K',
       Genre: 'canadian hip hop',
@@ -304,7 +304,7 @@ const songData=[
       Popularity: '88'
     },
     {
-      '': '20',
+      id: 20,
       'Track.Name': 'Truth Hurts',
       'Artist.Name': 'Lizzo',
       Genre: 'escape room',
@@ -320,7 +320,7 @@ const songData=[
       Popularity: '91'
     },
     {
-      '': '21',
+      id: 21,
       'Track.Name': 'Piece Of Your Heart',
       'Artist.Name': 'MEDUZA',
       Genre: 'pop house',
@@ -336,7 +336,7 @@ const songData=[
       Popularity: '91'
     },
     {
-      '': '22',
+      id: 22,
       'Track.Name': 'Panini',
       'Artist.Name': 'Lil Nas X',
       Genre: 'country rap',
@@ -352,7 +352,7 @@ const songData=[
       Popularity: '91'
     },
     {
-      '': '23',
+      id: 23,
       'Track.Name': 'No Me Conoce',
       'Artist.Name': 'Jhay Cortez',
       Genre: 'reggaeton flow',
@@ -368,7 +368,7 @@ const songData=[
       Popularity: '83'
     },
     {
-      '': '24',
+      id: 24,
       'Track.Name': 'Soltera',
       'Artist.Name': 'Lunay',
       Genre: 'latin',
@@ -384,7 +384,7 @@ const songData=[
       Popularity: '91'
     },
     {
-      '': '25',
+      id: 25,
       'Track.Name': 'bad guy',
       'Artist.Name': 'Billie Eilish',
       Genre: 'electropop',
@@ -400,7 +400,7 @@ const songData=[
       Popularity: '89'
     },
     {
-      '': '26',
+      id: 26,
       'Track.Name': "If I Can't Have You",
       'Artist.Name': 'Shawn Mendes',
       Genre: 'canadian pop',
@@ -416,7 +416,7 @@ const songData=[
       Popularity: '70'
     },
     {
-      '': '27',
+      id: 27,
       'Track.Name': 'Dance Monkey',
       'Artist.Name': 'Tones and I',
       Genre: 'australian pop',
@@ -432,7 +432,7 @@ const songData=[
       Popularity: '83'
     },
     {
-      '': '28',
+      id: 28,
       'Track.Name': "It's You",
       'Artist.Name': 'Ali Gatie',
       Genre: 'canadian hip hop',
@@ -448,7 +448,7 @@ const songData=[
       Popularity: '89'
     },
     {
-      '': '29',
+      id: 29,
       'Track.Name': 'Con Calma',
       'Artist.Name': 'Daddy Yankee',
       Genre: 'latin',
@@ -464,7 +464,7 @@ const songData=[
       Popularity: '91'
     },
     {
-      '': '30',
+      id: 30,
       'Track.Name': 'QUE PRETENDES',
       'Artist.Name': 'J Balvin',
       Genre: 'latin',
@@ -480,7 +480,7 @@ const songData=[
       Popularity: '89'
     },
     {
-      '': '31',
+      id: 31,
       'Track.Name': 'Takeaway',
       'Artist.Name': 'The Chainsmokers',
       Genre: 'edm',
@@ -496,7 +496,7 @@ const songData=[
       Popularity: '84'
     },
     {
-      '': '32',
+      id: 32,
       'Track.Name': '7 rings',
       'Artist.Name': 'Ariana Grande',
       Genre: 'dance pop',
@@ -512,7 +512,7 @@ const songData=[
       Popularity: '89'
     },
     {
-      '': '33',
+      id: 33,
       'Track.Name': '0.95833',
       'Artist.Name': 'Maluma',
       Genre: 'reggaeton',
@@ -528,7 +528,7 @@ const songData=[
       Popularity: '89'
     },
     {
-      '': '34',
+      id: 34,
       'Track.Name': 'The London',
       'Artist.Name': 'Young Thug',
       Genre: 'atl hip hop',
@@ -544,7 +544,7 @@ const songData=[
       Popularity: '89'
     },
     {
-      '': '35',
+      id: 35,
       'Track.Name': 'Never Really Over',
       'Artist.Name': 'Katy Perry',
       Genre: 'dance pop',
@@ -560,7 +560,7 @@ const songData=[
       Popularity: '89'
     },
     {
-      '': '36',
+      id: 36,
       'Track.Name': 'Summer Days',
       'Artist.Name': 'Martin Garrix',
       Genre: 'big room',
@@ -576,7 +576,7 @@ const songData=[
       Popularity: '89'
     },
     {
-      '': '37',
+      id: 37,
       'Track.Name': 'Otro Trago',
       'Artist.Name': 'Sech',
       Genre: 'panamanian pop',
@@ -592,7 +592,7 @@ const songData=[
       Popularity: '91'
     },
     {
-      '': '38',
+      id: 38,
       'Track.Name': 'Antisocial',
       'Artist.Name': 'Ed Sheeran',
       Genre: 'pop',
@@ -608,7 +608,7 @@ const songData=[
       Popularity: '87'
     },
     {
-      '': '39',
+      id: 39,
       'Track.Name': 'Sucker',
       'Artist.Name': 'Jonas Brothers',
       Genre: 'boy band',
@@ -624,7 +624,7 @@ const songData=[
       Popularity: '80'
     },
     {
-      '': '40',
+      id: 40,
       'Track.Name': "fuck, i'm lonely",
       'Artist.Name': 'Lauv',
       Genre: 'dance pop',
@@ -640,7 +640,7 @@ const songData=[
       Popularity: '78'
     },
     {
-      '': '41',
+      id: 41,
       'Track.Name': 'Higher Love',
       'Artist.Name': 'Kygo',
       Genre: 'edm',
@@ -656,7 +656,7 @@ const songData=[
       Popularity: '88'
     },
     {
-      '': '42',
+      id: 42,
       'Track.Name': 'You Need To Calm Down',
       'Artist.Name': 'Taylor Swift',
       Genre: 'dance pop',
@@ -672,7 +672,7 @@ const songData=[
       Popularity: '90'
     },
     {
-      '': '43',
+      id: 43,
       'Track.Name': 'Shallow',
       'Artist.Name': 'Lady Gaga',
       Genre: 'dance pop',
@@ -688,7 +688,7 @@ const songData=[
       Popularity: '87'
     },
     {
-      '': '44',
+      id: 44,
       'Track.Name': 'Talk',
       'Artist.Name': 'Khalid',
       Genre: 'pop',
@@ -704,7 +704,7 @@ const songData=[
       Popularity: '84'
     },
     {
-      '': '45',
+      id: 45,
       'Track.Name': 'Con Altura',
       'Artist.Name': 'ROSALIA',
       Genre: 'r&b en espanol',
@@ -720,7 +720,7 @@ const songData=[
       Popularity: '88'
     },
     {
-      '': '46',
+      id: 46,
       'Track.Name': 'One Thing Right',
       'Artist.Name': 'Marshmello',
       Genre: 'brostep',
@@ -736,7 +736,7 @@ const songData=[
       Popularity: '88'
     },
     {
-      '': '47',
+      id: 47,
       'Track.Name': 'Te Robaro',
       'Artist.Name': 'Nicky Jam',
       Genre: 'latin',
@@ -752,7 +752,7 @@ const songData=[
       Popularity: '88'
     },
     {
-      '': '48',
+      id: 48,
       'Track.Name': 'Happier',
       'Artist.Name': 'Marshmello',
       Genre: 'brostep',
@@ -768,7 +768,7 @@ const songData=[
       Popularity: '88'
     },
     {
-      '': '49',
+      id: 49,
       'Track.Name': 'Call You Mine',
       'Artist.Name': 'The Chainsmokers',
       Genre: 'edm',
@@ -784,7 +784,7 @@ const songData=[
       Popularity: '88'
     },
     {
-      '': '50',
+      id: 50,
       'Track.Name': 'Cross Me',
       'Artist.Name': 'Ed Sheeran',
       Genre: 'pop',
