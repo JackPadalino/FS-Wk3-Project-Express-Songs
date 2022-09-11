@@ -1,15 +1,19 @@
 const dummyData=require('./dummyData.js');
 const express=require('express');
+const volleyball = require('volleyball');
+const morgan = require('morgan');
 const app=express();
 const PORT=3000;
 
 // importing other modules
-app.use(express.static('public'));
-const volleyball=require('volleyball');
+app.use(morgan('dev')); // using the morgan middleware logger
+app.use(express.static('public')); // the static middleware will find our public folder for all static files
+
 app.use(volleyball);
 
 // here we're creating an error handler
 function errorHandler(err, req, res, next) {
+  //console.log(err);
   console.log(err.stack);
   const html=`
   <!DOCTYPE html>
@@ -19,7 +23,7 @@ function errorHandler(err, req, res, next) {
     <link rel='stylesheet' href='/style.css'/>
   </head>
   <body>
-    <p>SoMeThInG wEnT wRoNg...</p>
+    <p>${err.message}</p>
     <img src="/fine.gif" />
   </body>
   </html>
@@ -67,7 +71,7 @@ app.get('/songs/:songId',(req,res)=>{
   const songId=req.params.songId;
   const song = dummyData.find(songId);
   if (!song.id){
-    throw new Error(`Song with ID:${songId} not found.`)
+    throw new Error(`Song with id ${songId} not found`)
   }else{
     const html = `
     <!DOCTYPE html>
@@ -91,6 +95,11 @@ app.get('/songs/:songId',(req,res)=>{
     `;
     res.send(html);
   };
+});
+
+// creating a new route that will throw an error to test the error handler
+app.get('/error',(req,res)=>{
+  throw new Error('This should trigger the error handler function!');
 });
 
 // using the error handler as middleware
