@@ -1,36 +1,17 @@
-const dummyData=require('./dummyData.js');
 const express=require('express');
 const volleyball = require('volleyball');
 const morgan = require('morgan');
+const views=require('./views');
+
 const app=express();
 const PORT=3000;
+const dummyData=require('./dummyData.js');
 
-// importing other modules
-app.use(morgan('dev')); // using the morgan middleware logger
-app.use(express.static('public')); // the static middleware will find our public folder for all static files
-
+app.use(morgan('dev'));
+app.use(express.static('public'));
 app.use(volleyball);
 
-// here we're creating an error handler
-function errorHandler(err, req, res, next) {
-  //console.log(err);
-  console.log(err.stack);
-  const html=`
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <title>Song DB</title>
-    <link rel='stylesheet' href='/style.css'/>
-  </head>
-  <body>
-    <p>${err.message}</p>
-    <img src="/fine.gif" />
-  </body>
-  </html>
-  `
-	res.status(404).send(html);
-}
-
+// end point for health of server
 app.get('/health',(req,res)=>{
     res.send('Server is online!');
 })
@@ -38,31 +19,7 @@ app.get('/health',(req,res)=>{
 // endpoint for entire array
 app.get('/songs',(req,res)=>{
   const songData=dummyData.list();
-  const html = `
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <title>Song DB</title>
-    <link rel='stylesheet' href='/style.css'/>
-  </head>
-  <body>
-    <div id="mainContainer">
-      <h1 id="mainTitle">Songs</h1>
-      <div id='songListContainer'>
-        ${songData.map(
-          (song) =>
-            `
-            <div class='songContainer'>
-              <a href="/songs/${song.id}/"><b>${song['Track.Name']}</b> by ${song['Artist.Name']}</a>
-              <p>${song.Genre}</p>
-            </div>
-            `
-        ).join('')}
-      </div>
-    </div>
-  </body>
-  </html>
-  `;
+  const html = views.listSongs(songData);
   res.send(html);
 });
 
@@ -73,37 +30,22 @@ app.get('/songs/:songId',(req,res)=>{
   if (!song.id){
     throw new Error(`Song with id ${songId} not found`)
   }else{
-    const html = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Song DB</title>
-      <link rel='stylesheet' href='/style.css'/>
-    </head>
-    <body>
-      <div class='songDetailsContainer'>
-        <h1 id="songTitle">${song['Track.Name']}</h1>
-        <h3>${song['Artist.Name']}</h3>
-        <ul>
-          <li><b>Genre:</b> ${song.Genre}</li>
-          <li><b>BPM:</b> ${song['Beats.Per.Minute']}</li>
-          <li><b>Energy:</b> ${song.Energy}</li>
-        </ul>
-      </div>
-    </body>
-    </html>
-    `;
+    const html = views.songDetails(song);
     res.send(html);
   };
 });
 
 // creating a new route that will throw an error to test the error handler
 app.get('/error',(req,res)=>{
-  throw new Error('This should trigger the error handler function!');
+  throw new Error('You have found a lovely new error!');
 });
 
 // using the error handler as middleware
-app.use(errorHandler);
+app.use((err, req, res, next)=>{
+  console.log(err);
+  const html=views.errorHandler(err);
+	res.status(404).send(html);
+});
 
 // telling Node to listen up
 app.listen(PORT,()=>{
