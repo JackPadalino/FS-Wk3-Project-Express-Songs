@@ -6,8 +6,10 @@ https://sebhastian.com/read-csv-javascript/
 const fs=require('fs');
 const {parse}=require('csv-parse');
 
+// path to CSV file
 const filePath='/Users/snerd/desktop/top50.csv'
 
+// telling the fs module to find the CSV file
 fs.createReadStream(filePath);
 
 // Read the CSV file and turn it into an array of objects
