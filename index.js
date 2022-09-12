@@ -41,8 +41,13 @@ app.get('/error',(req,res)=>{
 });
 
 // catching any undefined routes
-app.get('*', (req, res)=>{
-  throw new Error('Page not found.');
+
+//app.get('*', (req, res)=>{
+//  throw new Error('Page not found.');
+//});
+
+app.use((req, res, next)=>{
+  if(!req.route) throw new Error('Page not found');  
 });
 
 // using the error handler as middleware
