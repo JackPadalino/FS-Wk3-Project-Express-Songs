@@ -40,6 +40,11 @@ app.get('/error',(req,res)=>{
   throw new Error('You have found a lovely new error!');
 });
 
+// catching any undefined routes
+app.get('*', (req, res)=>{
+  throw new Error('Page not found.');
+});
+
 // using the error handler as middleware
 app.use((err, req, res, next)=>{
   console.log(err);
